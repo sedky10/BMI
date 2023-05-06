@@ -147,73 +147,67 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: const Color(0xff323244),
-                              ),
-                              margin: const EdgeInsets.all(15),
-                              child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    const Text(
-                                      'HEIGHT',
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.baseline,
-                                      textBaseline: TextBaseline.alphabetic,
-                                      children: [
-                                        Text(
-                                          thumvalue.toInt().toString(),
-                                          style: const TextStyle(
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                        Text(
-                                          'CM'.toString(),
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.grey[400],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Slider(
-                                        value: thumvalue,
-                                        min: 100,
-                                        max: 220,
-                                        thumbColor: const Color(0xffe83d67),
-                                        activeColor: const Color(0xffe83d67),
-                                        onChanged: (newValue) {
-                                          setState(() {
-                                            thumvalue = newValue;
-                                          });
-                                        }),
-                                  ],
+                    child: GestureDetector(
+                      onTap: () {},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: const Color(0xff323244),
+                        ),
+                        margin: const EdgeInsets.all(15),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text(
+                                'HEIGHT',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey,
                                 ),
                               ),
-                            ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.baseline,
+                                textBaseline: TextBaseline.alphabetic,
+                                children: [
+                                  Text(
+                                    thumvalue.toInt().toString(),
+                                    style: const TextStyle(
+                                      fontSize: 30,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Text(
+                                    'CM'.toString(),
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey[400],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Slider(
+                                  value: thumvalue,
+                                  min: 100,
+                                  max: 220,
+                                  thumbColor: const Color(0xffe83d67),
+                                  activeColor: const Color(0xffe83d67),
+                                  onChanged: (newValue) {
+                                    setState(() {
+                                      thumvalue = newValue;
+                                    });
+                                  }),
+                            ],
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                   Expanded(
